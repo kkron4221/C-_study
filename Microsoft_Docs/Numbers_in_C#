@@ -1,0 +1,28 @@
+using System;
+
+public class Hello{
+    public static void Main(){
+        int a = 7;
+        int b = 4;
+        int c = 3;
+        int d = (a + b) / c;
+        int e = (a + b) % c;
+        
+        int max = int.MaxValue;
+        int min = int.MinValue;
+        double max_d = double.MaxValue;
+        double min_d = double.MinValue;
+        
+        int what = max + 3;
+        // $ exchange meaningful words. For example {d} doesn't be string.
+        Console.WriteLine($"quotient: {d}");
+        Console.WriteLine($"remainder: {e}");
+        
+        Console.WriteLine($"The range of integers is {min} to {max}");
+        
+        Console.WriteLine($"An example of overflow: {what}");
+        
+        Console.WriteLine($"The range of double is {min_d} to {max_d}");
+        
+    }
+}
