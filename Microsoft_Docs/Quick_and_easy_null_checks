@@ -1,0 +1,12 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        string s = null;
+        char? c = s?[0];
+        Console.WriteLine(s?.Length);
+        Console.WriteLine(c.HasValue);
+    }
+}
