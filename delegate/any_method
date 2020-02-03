@@ -1,0 +1,19 @@
+using System;
+
+delegate void ShowMessage();
+
+class DelegateTest
+{
+  static void Main()
+  {
+    ShowMessage a = new ShowMessage(A);
+    a += new ShowMessage(B);
+    a += new ShowMessage(C);
+    
+    a();
+  }
+  
+  static void A(){Console.Write("A is called\n");}
+  static void B(){Console.Write("B is called\n");}
+  static void C(){Console.Write("C is called\n");}
+}  
