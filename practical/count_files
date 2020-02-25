@@ -1,0 +1,30 @@
+using System;
+using System.IO;
+using Microsoft.Office.Interop.Excel;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            String dire_name = @"C:\Users";
+            String dire_name_in_evidence = "";
+            DirectoryInfo di = new DirectoryInfo(dire_name);
+            DirectoryInfo[] diArr = di.GetDirectories();
+            int count = 0;
+            foreach (DirectoryInfo dri in diArr)
+            {
+                dire_name_in_evidence = dire_name + @"\" + dri;
+                DirectoryInfo di_file_name = new DirectoryInfo(dire_name_in_evidence);
+                foreach (var fi in di_file_name.GetFiles())
+                {
+                     Console.WriteLine(fi.Name);
+                     count++;
+                }
+            }
+            Console.WriteLine(count);
+        }
+    }
+}
