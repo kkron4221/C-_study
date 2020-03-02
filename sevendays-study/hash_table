@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+
+namespace SampleEx603
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<String, String> capital = new Dictionary<String, String>();
+            capital["Japan"] = "Tokyo";
+            capital["Britain"] = "London";
+            capital["Chaina"] = "Beijing";
+            capital["America"] = "WashingtonD.C";
+            Console.WriteLine("World's capital");
+            foreach(String s in capital.Keys)
+            {
+                Console.WriteLine("{0}'s capital is {1}.", s, capital[s]);
+            }
+        }
+    }
+}
