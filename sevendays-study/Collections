@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+
+namespace SampleEx601
+{
+    class Program
+    {
+        public static void output_collections(List<string> collections)
+        {
+            for (int i = 0; i < collections.Count; i++)
+            {
+                Console.WriteLine("name_collection[{0}]={1}", i, collections[i]);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            List<string> name_collection = new List<string>();
+            name_collection.Add("hogehoge");
+            name_collection.Add("fox");
+            name_collection.Add("moca");
+            name_collection.Insert(1, "aaaa");
+            output_collections(name_collection);
+            Console.WriteLine("-----------------------");
+
+            name_collection.Remove("aaaa");
+            name_collection.RemoveAt(0);
+            output_collections(name_collection);
+        }
+
+    }
+}
